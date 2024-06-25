@@ -1,4 +1,4 @@
-package org.example;
+package org.example.UEC;
 
 import java.util.Random;
 
