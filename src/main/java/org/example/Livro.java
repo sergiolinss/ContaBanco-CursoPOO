@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Random;
-
 public class Livro implements Publicacao {
     private String titulo;
     private String autor;
@@ -10,12 +8,24 @@ public class Livro implements Publicacao {
     private boolean aberto;
     private Pessoa leitor;
 
-    public void detalhes(){
+    public String detalhes() {
+
         System.out.println("= DETALHES DO LIVRO = ");
-        System.out.println("Título: " + this.getTitulo() + " Autor: " + this.getAutor() + " Total de páginas: " + this.getTotalPaginas());
+        System.out.println("Título: " + this.getTitulo() + ", Autor: " + this.getAutor() + ", Total de páginas: " + this.getTotalPaginas());
         System.out.println(" = detalhes adicionais = ");
-        System.out.println("Página atual: " + this.getPaginaAtual() + " Está aberto? " + this.getAberto());
-        System.out.println("Leitor atual: " + this.getLeitor());
+        System.out.println("Página atual: " + this.getPaginaAtual() + ", Está aberto? " + this.getAberto());
+        System.out.println("Leitor atual: " + this.leitor.getNome());
+        return "";
+    }
+
+    public Livro(String titulo, String autor, int totalPaginas, Pessoa leitor) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.totalPaginas = totalPaginas;
+        this.leitor = leitor;
+        this.aberto = false;
+        this.paginaAtual = 0;
+
     }
 
     public String getTitulo() {
@@ -68,7 +78,7 @@ public class Livro implements Publicacao {
 
     @Override
     public void abrir() {
-     this.setAberto(true);
+        this.setAberto(true);
     }
 
     @Override
@@ -77,17 +87,14 @@ public class Livro implements Publicacao {
     }
 
     @Override
-    public void folhear() {
-
-        if (this.getAberto()){
-            Random aleatorio = new Random();
-            int totalPaginas = getTotalPaginas();
-            int paginaAleatoria = aleatorio.nextInt(totalPaginas) + 1;
-            this.setPaginaAtual(paginaAleatoria);
-            System.out.println(" Voce folheou para a pagina " + paginaAleatoria);
-        } else{
-            System.out.println("O livro fechado não tem como folhear ");
+    public void folhear(int pagina) {
+        if (pagina > this.getTotalPaginas()) {
+            this.setPaginaAtual(0);
+            System.out.println(" Você excedeu o limite de paginas.");
+        } else {
+            this.paginaAtual = pagina;
         }
+
     }
 
     @Override
@@ -97,6 +104,6 @@ public class Livro implements Publicacao {
 
     @Override
     public void voltarPag() {
-        this.setPaginaAtual(getPaginaAtual() -1);
+        this.setPaginaAtual(getPaginaAtual() - 1);
     }
 }
