@@ -1,4 +1,4 @@
-package org.example;
+package org.example.controle_remoto;
 
 public interface Controlador {
     public abstract void ligar();

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.UEC;
 
 public class Lutador {
     private String nome;
