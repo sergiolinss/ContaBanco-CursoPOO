@@ -1,7 +1,9 @@
 package org.example;
 
-import org.example.UEC.Luta;
-import org.example.UEC.Lutador;
+import org.example.heranca.Aluno;
+import org.example.heranca.Funcionario;
+import org.example.heranca.PessoaEscola;
+import org.example.heranca.Professor;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -20,7 +22,7 @@ public class Main {
         UEC01.marcarLuta(lutadores[0], lutadores[0]);
         UEC01.lutar();
         lutadores[0].Status();
-        lutadores[1].Status(); */
+        lutadores[1].Status();
 
         Pessoa[] pessoas = new Pessoa[2];
         Livro[] livros = new  Livro[3];
@@ -35,9 +37,29 @@ public class Main {
         livros[0].folhear(24);
         livros[0].avancarPag();
         System.out.println(livros[0].detalhes());
-        System.out.println(livros[1].detalhes());
+        System.out.println(livros[1].detalhes()); */
+
+        PessoaEscola p1 = new PessoaEscola();
+        Aluno p2 = new Aluno();
+        Professor p3 = new Professor();
+        Funcionario p4 = new Funcionario();
+
+        p1.setNome("joao");
+        p2.setNome("maria");
+        p3.setNome("claudio");
+        p4.setNome("fabiana");
+        p1.setSexo("masculino");
+        p4.setSexo("feminino");
+        p2.setIdade(18);
+        p2.setCurso("informatica");
+        p3.setSalario(2500.50f);
+        p4.setSetor("estoque");
+        p3.receberAumento(400f);
 
 
-
+        System.out.println(p1.toString());
+        System.out.println(p2.toString());
+        System.out.println(p3.toString());
+        System.out.println(p4.toString());
     }
 }
