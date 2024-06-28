@@ -8,6 +8,7 @@ import org.example.heranca2.Aluno2;
 import org.example.heranca2.Bolsista2;
 import org.example.heranca2.Professor2;
 import org.example.heranca2.Visitante2;
+import org.example.polimorfismo.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -64,7 +65,7 @@ public class Main {
         System.out.println(p1.toString());
         System.out.println(p2.toString());
         System.out.println(p3.toString());
-        System.out.println(p4.toString()); */
+        System.out.println(p4.toString());
         Visitante2 v1 = new Visitante2();
         v1.setNome("Joao");
         v1.setIdade(22);
@@ -86,8 +87,22 @@ public class Main {
         Professor2 p1 = new Professor2();
         p1.setNome("Carlos");
         p1.setSalario(1500f);
-        p1.receberAumento(230f);
-
-
+        p1.receberAumento(230f); */
+        Mamifero m = new Mamifero();
+        Ave a = new Ave();
+        m.setPeso(35.3f);
+        m.setCorPelo("marrom");
+        m.alimentar();
+        m.locomover();
+        m.emitirSom();
+        a.locomover();
+        Canguru c = new Canguru();
+        c.locomover();
+        Arara arara = new Arara();
+        arara.locomover();
+        Jabuti j = new Jabuti();
+        j.locomover();
+        Cachorro cachorro = new Cachorro();
+        cachorro.emitirSom();
     }
 }
