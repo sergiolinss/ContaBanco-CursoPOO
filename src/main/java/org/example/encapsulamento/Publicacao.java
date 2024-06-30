@@ -1,4 +1,4 @@
-package org.example;
+package org.example.encapsulamento;
 
 public interface Publicacao {
     public abstract void abrir();
