@@ -1,4 +1,4 @@
-package org.example;
+package org.example.encapsulamento;
 
 public class Livro implements Publicacao {
     private String titulo;

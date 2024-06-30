@@ -30,7 +30,16 @@ public class PessoaEscola {
     }
 
     public void setSexo(String sexo) {
-        this.sexo = sexo;
+        if(sexo.equalsIgnoreCase("masculno") || sexo.equalsIgnoreCase("m")){
+            this.sexo = sexo;
+            System.out.println(sexo);
+        }
+        else if(sexo.equalsIgnoreCase("feminino" ) || sexo.equalsIgnoreCase("f")){
+            this.sexo = sexo;
+        } else {
+            System.out.println(" Sexo inválido, procure um psiquiatra ");
+        }
+
     }
 
     @Override

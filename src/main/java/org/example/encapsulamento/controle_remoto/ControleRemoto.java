@@ -1,4 +1,4 @@
-package org.example.controle_remoto;
+package org.example.encapsulamento.controle_remoto;
 
 public class ControleRemoto implements Controlador {
     private int volume;

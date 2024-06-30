@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.exercicioFinal.Gafanhoto;
+import org.example.exercicioFinal.Video;
 import org.example.heranca.Aluno;
 import org.example.heranca.Funcionario;
 import org.example.heranca.PessoaEscola;
@@ -104,7 +106,7 @@ public class Main {
         Jabuti j = new Jabuti();
         j.locomover();
         Cachorro cachorro = new Cachorro();
-        cachorro.emitirSom(); */
+        cachorro.emitirSom();
 
         Cachorro2 c = new Cachorro2();
         c.reagir("Olá");
@@ -115,6 +117,16 @@ public class Main {
         c.reagir(false);
         c.reagir(2, 12.5f);
         c.reagir(17, 4.5f);
-
+        Aluno joao = new Aluno();
+        joao.setSexo("M"); */
+        Video[] v = new Video[3];
+        v[0] = new Video("Aula 1");
+        v[1] = new Video("Aula 2");
+        v[2] = new Video("aula 3");
+        System.out.println(v[0].toString());
+        Gafanhoto[] g = new Gafanhoto[2];
+        g[0] = new Gafanhoto("joao", 22, "m", "jaozin");
+        g[1] = new Gafanhoto("maria", 23, "f", "mariazinha");
+        System.out.println(g[1].toString());
     }
 }
