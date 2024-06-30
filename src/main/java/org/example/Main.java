@@ -9,6 +9,7 @@ import org.example.heranca2.Bolsista2;
 import org.example.heranca2.Professor2;
 import org.example.heranca2.Visitante2;
 import org.example.polimorfismo.*;
+import org.example.polimorfismo2.Cachorro2;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -87,7 +88,7 @@ public class Main {
         Professor2 p1 = new Professor2();
         p1.setNome("Carlos");
         p1.setSalario(1500f);
-        p1.receberAumento(230f); */
+        p1.receberAumento(230f);
         Mamifero m = new Mamifero();
         Ave a = new Ave();
         m.setPeso(35.3f);
@@ -103,6 +104,17 @@ public class Main {
         Jabuti j = new Jabuti();
         j.locomover();
         Cachorro cachorro = new Cachorro();
-        cachorro.emitirSom();
+        cachorro.emitirSom(); */
+
+        Cachorro2 c = new Cachorro2();
+        c.reagir("Olá");
+        c.reagir("vai apanhar");
+        c.reagir(11, 45);
+        c.reagir(21, 00);
+        c.reagir(true);
+        c.reagir(false);
+        c.reagir(2, 12.5f);
+        c.reagir(17, 4.5f);
+
     }
 }
