@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.exercicioFinal.Gafanhoto;
 import org.example.exercicioFinal.Video;
+import org.example.exercicioFinal.Vizualizacao;
 import org.example.heranca.Aluno;
 import org.example.heranca.Funcionario;
 import org.example.heranca.PessoaEscola;
@@ -123,10 +124,19 @@ public class Main {
         v[0] = new Video("Aula 1");
         v[1] = new Video("Aula 2");
         v[2] = new Video("aula 3");
-        System.out.println(v[0].toString());
+        //System.out.println(v[0].toString());
         Gafanhoto[] g = new Gafanhoto[2];
         g[0] = new Gafanhoto("joao", 22, "m", "jaozin");
         g[1] = new Gafanhoto("maria", 23, "f", "mariazinha");
-        System.out.println(g[1].toString());
+        //System.out.println(g[1].toString());
+        Vizualizacao[] vizualizacao = new Vizualizacao[2];
+        vizualizacao[0] = new Vizualizacao(g[0], v[1]);
+        vizualizacao[1] = new Vizualizacao(g[1], v[1]);
+        vizualizacao[1].avaliar(10);
+        vizualizacao[0].avaliar(5);
+        System.out.println(vizualizacao[0].toString());
+        System.out.println(vizualizacao[1].toString());
+        System.out.println(v[1].toString());
+
     }
 }
