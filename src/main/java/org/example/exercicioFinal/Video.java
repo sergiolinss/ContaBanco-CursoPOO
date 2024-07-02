@@ -6,6 +6,8 @@ public class Video implements AcoesVideo {
     private int views;
     private int curtidas;
     private boolean reproduzindo;
+    private int totalAvaliacoes;
+    private int numAvaliacoes;
 
     public Video(String titulo) {
         this.titulo = titulo;
@@ -13,6 +15,14 @@ public class Video implements AcoesVideo {
         this.views = 0;
         this.curtidas = 0;
         this.reproduzindo = false;
+        this.totalAvaliacoes = 1;
+        this.numAvaliacoes = 1;
+
+    }
+    public double getMediaAvaliacoes(){
+        if (numAvaliacoes == 0){
+            return 0;
+        } return (double) this.totalAvaliacoes / this.numAvaliacoes;
     }
 
     public String getTitulo() {
@@ -28,9 +38,9 @@ public class Video implements AcoesVideo {
     }
 
     public void setAvaliacao(int avaliacao) {
-        int nova;
-        nova = (int) (this.avaliacao + avaliacao)/this.views;
-        this.avaliacao = nova;
+       this.totalAvaliacoes += avaliacao;
+       this.numAvaliacoes++;
+       this.avaliacao = this.totalAvaliacoes / this.numAvaliacoes;
     }
 
     public int getViews() {
@@ -81,6 +91,9 @@ public class Video implements AcoesVideo {
                 ", views=" + views +
                 ", curtidas=" + curtidas +
                 ", reproduzindo=" + reproduzindo +
+                ", totalAvaliacoes=" + totalAvaliacoes +
+                ", numAvaliacoes=" + numAvaliacoes +
+                ", mediaAvaliacoes=" + getMediaAvaliacoes() +
                 '}';
     }
 }
