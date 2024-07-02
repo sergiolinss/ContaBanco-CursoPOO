@@ -140,6 +140,7 @@ public class Main {
         System.out.println(vizualizacao[0].toString());
         System.out.println(vizualizacao[1].toString());
         System.out.println(v[1].toString());
+        System.out.println(vizualizacao[2].toString());
 
     }
 }
